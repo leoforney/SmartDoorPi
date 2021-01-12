@@ -1,0 +1,38 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.springframework.boot' version '2.4.1'
+}
+
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'war'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'tk.leoforney.smartdoorpi'
+version = '1.0'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://oss.sonatype.org/content/groups/public"
+    }
+}
+
+dependencies {
+    implementation 'com.konghq:unirest-java:3.7.04'
+    implementation 'com.google.code.gson:gson:2.7'
+    implementation 'com.pi4j:pi4j-core:1.2'
+    implementation 'com.pi4j:pi4j-device:1.2'
+    implementation 'com.google.guava:guava:19.0'
+    implementation 'commons-codec:commons-codec:1.10'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+}
