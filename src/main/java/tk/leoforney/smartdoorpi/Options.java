@@ -15,9 +15,9 @@ import java.util.logging.Logger;
 
 class Options {
     static String deviceName = "N/S";
-    static String appDir = "/home/pi";
+    static String appDir = "";
     //static String appDir = "C:\\Users\\Leo\\OneDrive\\Desktop\\";
-    static final String configFileName = appDir + "/config.json";
+    static final String configFileName = appDir + "config.json";
     static final String SmartThingsEndpoint = "https://graph.api.smartthings.com:443/api/smartapps/installations/a78c2690-d21f-4b79-9e48-926688e2643a";
 
     public static final boolean EMULATE = false;
